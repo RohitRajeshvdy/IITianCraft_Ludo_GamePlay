@@ -99,5 +99,5 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 #Redmi Note 8 Pro 
-Devices/
-Xiaomi Redmi Note 8 Pro.device
+Assets/Devices/
+Assets/Xiaomi Redmi Note 8 Pro.device
