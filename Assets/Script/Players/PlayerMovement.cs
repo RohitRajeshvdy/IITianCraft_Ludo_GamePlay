@@ -1,16 +1,13 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Settings")]
-    [SerializeField] private PlayerColor playerColor; // enum for colors
-    [SerializeField] private int playerID; // 0, 1, 2, 3 for four players
+    [SerializeField] private PlayerColor playerColor;
+    [SerializeField] private int playerID;
 
     private PathPointParent pathPointParent;
-    private Camera mainCamera;
-
     private int diceNumber;
     private int numberOfStepsAlreadyMoved;
     private int startingPathIndex;
@@ -18,32 +15,22 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         pathPointParent = Object.FindFirstObjectByType<PathPointParent>();
-        mainCamera = Camera.main;
-        SetStartingPathIndex();
-    }
-
-    void Update()
-    {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            CheckClick();
-        }
-    }
-
-    private void SetStartingPathIndex()
-    {
-        // Set different starting positions for each player
-        // Assuming each player starts 13 positions apart (52 total positions / 4 players)
         startingPathIndex = (playerID * 13) + 1;
     }
 
-    private void CheckClick()
+    void OnEnable()
     {
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        Vector2 worldPosition = mainCamera.ScreenToWorldPoint(mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+        InputManager.OnObjectClicked += HandleClick;
+    }
 
-        if (hit.collider != null && hit.collider.gameObject == gameObject)
+    void OnDisable()
+    {
+        InputManager.OnObjectClicked -= HandleClick;
+    }
+
+    private void HandleClick(GameObject clickedObject)
+    {
+        if (clickedObject == gameObject)
         {
             StartCoroutine(MovePiece());
         }
