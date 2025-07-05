@@ -7,10 +7,9 @@ public class YellowPlayer : PlayerMovement
 
     private void HandleClick(GameObject clickedObject)
     {
-        if (clickedObject == gameObject)
+        if (clickedObject == gameObject && TurnManager.Instance.IsPlayerTurn(TurnManager.PlayerColor.Yellow))
         {
             MovePlayer(pathPointParent.YellowPathPoints);
         }
     }
-
 }

@@ -7,9 +7,10 @@ public class GreenPlayer : PlayerMovement
 
     private void HandleClick(GameObject clickedObject)
     {
-        if (clickedObject == gameObject)
+        if (clickedObject == gameObject && TurnManager.Instance.IsPlayerTurn(TurnManager.PlayerColor.Green))
         {
             MovePlayer(pathPointParent.GreenPathPoints);
         }
     }
+
 }

@@ -7,9 +7,10 @@ public class RedPlayer : PlayerMovement
 
     private void HandleClick(GameObject clickedObject)
     {
-        if (clickedObject == gameObject)
+        if (clickedObject == gameObject && TurnManager.Instance.IsPlayerTurn(TurnManager.PlayerColor.Red))
         {
             MovePlayer(pathPointParent.RedPathPoints);
         }
     }
+
 }
