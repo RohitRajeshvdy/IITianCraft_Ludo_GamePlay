@@ -7,14 +7,4 @@ public class PathPointParent : PathPoints
     public PathPoints[] BluePoints;
     public PathPoints[] RedPathPoints;
     public PathPoints[] GreenPathPoints;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

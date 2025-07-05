@@ -5,17 +5,28 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] private PlayerColor playerColor;
-    [SerializeField] private int playerID;
+    [SerializeField] private PathSelection selectedPathType;
 
-    private PathPointParent pathPointParent;
+    private PathPoints[] selectedPath;
+
     private int diceNumber;
     private int numberOfStepsAlreadyMoved;
     private int startingPathIndex;
 
     private void Awake()
     {
-        pathPointParent = Object.FindFirstObjectByType<PathPointParent>();
-        startingPathIndex = (playerID * 13) + 1;
+        var pathPointParent = Object.FindFirstObjectByType<PathPointParent>();
+
+        selectedPath = selectedPathType switch
+        {
+            PathSelection.Yellow => pathPointParent.YellowPathPoints,
+            PathSelection.Blue => pathPointParent.BluePoints,
+            PathSelection.Red => pathPointParent.RedPathPoints,
+            PathSelection.Green => pathPointParent.GreenPathPoints,
+            _ => pathPointParent.OuterPathPoints
+        };
+
+        startingPathIndex = 0;
     }
 
     void OnEnable()
@@ -42,11 +53,27 @@ public class PlayerMovement : MonoBehaviour
 
         for (int i = 0; i < diceNumber; i++)
         {
-            int currentPathIndex = (startingPathIndex + numberOfStepsAlreadyMoved + i) % pathPointParent.OuterPathPoints.Length;
-            transform.position = pathPointParent.OuterPathPoints[currentPathIndex].transform.position;
+            int currentPathIndex = (startingPathIndex + numberOfStepsAlreadyMoved + i) % selectedPath.Length;
+            transform.position = selectedPath[currentPathIndex].transform.position;
             yield return new WaitForSeconds(0.5f);
         }
 
         numberOfStepsAlreadyMoved += diceNumber;
     }
 }
+
+public enum PathSelection
+{
+    Yellow,
+    Blue,
+    Red,
+    Green
+}
+public enum PlayerColor
+{
+    Yellow,
+    Blue,
+    Red,
+    Green
+}
+

@@ -9,6 +9,24 @@ public class Random_Dice_Generator : MonoBehaviour
     [SerializeField] private TextMeshProUGUI diceNumberRed;
     [SerializeField] private TextMeshProUGUI diceNumberGreen;
 
+    void OnEnable()
+    {
+        InputManager.OnObjectClicked += HandleClick;
+    }
+
+    void OnDisable()
+    {
+        InputManager.OnObjectClicked -= HandleClick;
+    }
+
+    private void HandleClick(GameObject clickedObject)
+    {
+        if (clickedObject == gameObject)
+        {
+            
+        }
+    }
+
     void Update()
     {
         if (Keyboard.current.wKey.wasPressedThisFrame)
