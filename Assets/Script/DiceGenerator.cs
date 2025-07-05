@@ -5,7 +5,7 @@ public class DiceGenerator : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI diceNumberText;
 
-    public int GeneratedDiceValue;
+    public int diceNumber;
 
     void OnEnable()
     {
@@ -21,8 +21,8 @@ public class DiceGenerator : MonoBehaviour
     {
         if (clickedObject == gameObject)
         {
-            GeneratedDiceValue = Random.Range(1, 7);
-            diceNumberText.text = GeneratedDiceValue.ToString();
+            diceNumber = Random.Range(1, 7);
+            diceNumberText.text = diceNumber.ToString();
         }
     }
 }

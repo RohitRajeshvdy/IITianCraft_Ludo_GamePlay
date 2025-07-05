@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     private int numberOfStepsAlreadyMoved;
 
-    private int diceValue = 4;
+    public DiceGenerator diceGenerator;
 
     private void Awake()
     {
@@ -22,13 +22,13 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator MovePiece(PathPoints[] _path)
     {
 
-        for (int i = numberOfStepsAlreadyMoved; i < (numberOfStepsAlreadyMoved + diceValue); i++)
+        for (int i = numberOfStepsAlreadyMoved; i < (numberOfStepsAlreadyMoved + diceGenerator.diceNumber); i++)
         {
             transform.position = _path[i].transform.position;
             yield return new WaitForSeconds(0.5f);
         }
 
-        numberOfStepsAlreadyMoved += diceValue;
+        numberOfStepsAlreadyMoved += diceGenerator.diceNumber;
 
         TurnManager.Instance.EndTurn();
     }
