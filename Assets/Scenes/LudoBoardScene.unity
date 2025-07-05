@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 19118362}
   - component: {fileID: 19118363}
   - component: {fileID: 19118364}
+  - component: {fileID: 19118365}
   m_Layer: 0
   m_Name: Green_Dice
   m_TagString: Untagged
@@ -243,6 +244,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &19118365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19118361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851e95e72509a844a77b8d27047977b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceNumberText: {fileID: 1920485230}
+  diceNumber: 0
 --- !u!1 &42398464
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +369,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 88406849}
     m_Modifications:
+    - target: {fileID: 1900585863467194416, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 927593673}
     - target: {fileID: 5455939234223582968, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
       propertyPath: m_Name
       value: Yellow_Player (1)
@@ -661,6 +680,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 88406849}
     m_Modifications:
+    - target: {fileID: 1900585863467194416, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 927593673}
     - target: {fileID: 5455939234223582968, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
       propertyPath: m_Name
       value: Yellow_Player (2)
@@ -805,6 +828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 88406849}
     m_Modifications:
+    - target: {fileID: 1900585863467194416, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 927593673}
     - target: {fileID: 5455939234223582968, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
       propertyPath: m_Name
       value: Yellow_Player (3)
@@ -955,6 +982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green_Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4245766528698833560, guid: 483e030eac556b3499813ec98f614760, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 19118365}
     - target: {fileID: 6940411941261349731, guid: 483e030eac556b3499813ec98f614760, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.581
@@ -2344,6 +2375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3699790851267936592, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 696563106}
     - target: {fileID: 5622716835177506695, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
       propertyPath: m_Name
       value: Blue_Player (1)
@@ -3472,6 +3507,7 @@ GameObject:
   - component: {fileID: 696563103}
   - component: {fileID: 696563104}
   - component: {fileID: 696563105}
+  - component: {fileID: 696563106}
   m_Layer: 0
   m_Name: Blue_Dice
   m_TagString: Untagged
@@ -3585,6 +3621,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &696563106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696563102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851e95e72509a844a77b8d27047977b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceNumberText: {fileID: 1886752508}
+  diceNumber: 0
 --- !u!1001 &721602110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4284,6 +4334,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3699790851267936592, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 696563106}
     - target: {fileID: 5622716835177506695, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
       propertyPath: m_Name
       value: Blue_Player (3)
@@ -4340,6 +4394,7 @@ GameObject:
   - component: {fileID: 927593671}
   - component: {fileID: 927593670}
   - component: {fileID: 927593672}
+  - component: {fileID: 927593673}
   m_Layer: 0
   m_Name: Yellow_Dice
   m_TagString: Untagged
@@ -4453,6 +4508,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &927593673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927593668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851e95e72509a844a77b8d27047977b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceNumberText: {fileID: 308358130}
+  diceNumber: 0
 --- !u!1001 &928636059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4461,6 +4530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1966665070}
     m_Modifications:
+    - target: {fileID: 1081877637504741060, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 1568535965}
     - target: {fileID: 1313811583708068179, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.557
@@ -4585,7 +4658,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5317,7 +5390,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5370,6 +5443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1966665070}
     m_Modifications:
+    - target: {fileID: 1081877637504741060, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 1568535965}
     - target: {fileID: 1313811583708068179, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.275
@@ -5890,7 +5967,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6077,6 +6154,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3699790851267936592, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 696563106}
     - target: {fileID: 5622716835177506695, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
       propertyPath: m_Name
       value: Blue_Player (2)
@@ -6473,6 +6554,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3699790851267936592, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 696563106}
     - target: {fileID: 5622716835177506695, guid: 08ddcdfcf21e5b14480dbbbf06769f01, type: 3}
       propertyPath: m_Name
       value: Blue_Player
@@ -6879,7 +6964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1486282286}
-  - component: {fileID: 1486282285}
+  - component: {fileID: 1486282287}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6887,22 +6972,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1486282285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486282284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d851e95e72509a844a77b8d27047977b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceNumberYellow: {fileID: 308358130}
-  diceNumberBlue: {fileID: 1886752508}
-  diceNumberRed: {fileID: 614600455}
-  diceNumberGreen: {fileID: 1920485230}
 --- !u!4 &1486282286
 Transform:
   m_ObjectHideFlags: 0
@@ -6918,6 +6987,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1160246003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486282287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486282284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a259586ee64c6b24b9b109a16e99db20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1500370734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6926,6 +7007,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 88406849}
     m_Modifications:
+    - target: {fileID: 1900585863467194416, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 927593673}
     - target: {fileID: 5455939234223582968, guid: 6fad4283c9e0b6e4881078aeb6a121a4, type: 3}
       propertyPath: m_Name
       value: Yellow_Player (4)
@@ -6988,6 +7073,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1966665070}
     m_Modifications:
+    - target: {fileID: 1081877637504741060, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 1568535965}
     - target: {fileID: 1313811583708068179, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.557
@@ -7361,6 +7450,7 @@ GameObject:
   - component: {fileID: 1568535962}
   - component: {fileID: 1568535963}
   - component: {fileID: 1568535964}
+  - component: {fileID: 1568535965}
   m_Layer: 0
   m_Name: Red_Dice
   m_TagString: Untagged
@@ -7474,6 +7564,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1568535965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568535961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d851e95e72509a844a77b8d27047977b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceNumberText: {fileID: 614600455}
+  diceNumber: 0
 --- !u!1001 &1577336962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8009,6 +8113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1966665070}
     m_Modifications:
+    - target: {fileID: 1081877637504741060, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 1568535965}
     - target: {fileID: 1313811583708068179, guid: e10abbbcd303c1b4ab7ef65051c56420, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2496625
@@ -8860,6 +8968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathPointParent: {fileID: 0}
+  diceGenerator: {fileID: 0}
 --- !u!1001 &1830734622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9818,7 +9927,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10313,6 +10422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green_Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4245766528698833560, guid: 483e030eac556b3499813ec98f614760, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 19118365}
     - target: {fileID: 6940411941261349731, guid: 483e030eac556b3499813ec98f614760, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2680832
@@ -10697,6 +10810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green_Player (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4245766528698833560, guid: 483e030eac556b3499813ec98f614760, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 19118365}
     - target: {fileID: 6940411941261349731, guid: 483e030eac556b3499813ec98f614760, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.286
@@ -11109,6 +11226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green_Player (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4245766528698833560, guid: 483e030eac556b3499813ec98f614760, type: 3}
+      propertyPath: diceGenerator
+      value: 
+      objectReference: {fileID: 19118365}
     - target: {fileID: 6940411941261349731, guid: 483e030eac556b3499813ec98f614760, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.581
